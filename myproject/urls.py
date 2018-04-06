@@ -7,4 +7,7 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^cms/$', 'cms.views.lista'),
+    url(r'^cms/(\d+)', 'cms.views.processRequest'),   
+    url(r'^(.*)', 'cms.views.notOption'), 
 )
